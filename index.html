@@ -1,15 +1,26 @@
 ﻿<html>
 <head>
-  <meta charset="utf-8">
-  <title>テストページ</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>テストページ</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
-  <script src="index.js"></script>
+<script src="index.js"></script>
+<style>
+.block {
+  position : absolute;
+}
+#matui {
+  width : 40px;
+  height : 40px;
+}
+</style>
 </head>
 
 <body>
-  <span id="text">すぱん</span><br>
-  <button id="btn">ボタン</button>
+  <img class="block" id="red" src="red.png">
+  <img class="block" id="green" src="green.png">
+  <img class="block" id="blue" src="blue.png">
+  <img class="block" id="matui" src="matui.png">
 </body>
 
 </html>

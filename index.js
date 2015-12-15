@@ -8,19 +8,40 @@ function getIntegerRandom(min, max) {
 
 
 function afterLoad() {
-  $('#btn').click(
-    function(){
-      var a = getIntegerRandom(1, 100);
-      var message = '';
-      if (95 <= a) {
-        message = 'ファンブル！<br>';
-      }
-      else if (a <= 5) {
-        message = 'クリティカル！<br>';
-      }
-      $('#text').html(message+a);
-    }
-  )
+  $('#block').css({
+    "position" : "absolute"
+  });
+
+  $('body').on('mousemove', function(e){
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    setTimeout(function(){
+      $('#red').css({
+        "left" : mouseX - $('#red').width() / 2,
+        "top"  : mouseY - $('#red').height() / 2
+      });
+    }, 100);
+    setTimeout(function(){
+      $('#blue').css({
+        "left" : mouseX - $('#blue').width() / 2,
+        "top"  : mouseY - $('#blue').height() / 2
+      });
+    }, 200);
+    setTimeout(function(){
+      $('#green').css({
+        "left" : mouseX - $('#green').width() / 2,
+        "top"  : mouseY - $('#green').height() / 2
+      });
+    }, 300);
+    setTimeout(function(){
+      $('#matui').css({
+        "left" : mouseX - $('#matui').width() / 2,
+        "top"  : mouseY - $('#matui').height() / 2
+      });
+    }, 400);
+  });
+
 }
 
 // ロード完了したらafterLoadを実行
