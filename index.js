@@ -3,16 +3,12 @@
 function afterLoad() {
   $('#btn').click(
     function(){
-      if ($('#text').css('display') == 'none') {
-        $('#text').css({
-          "display" : "inline"
-        });
+      var a = Math.random();
+      var message = '';
+      if (a > 0.9) {
+        message = 'すげえ！';
       }
-      else {
-        $('#text').css({
-          "display" : "none"
-        });
-      }
+      $('#text').html(message+a);
     }
   )
 }
